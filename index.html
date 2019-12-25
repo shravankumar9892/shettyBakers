@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" href="css/normalize.css"> -->
+	<link rel="stylesheet" href="css/floats.css">
+	<script src="logic.js"></script>
+</head>
+<body>
+	<!-- Modal opening message -->
+	<!-- Modal -->
+	<div class="modal" id="modal-one" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-header">
+				 <h2>Shetty Bakers</h2>
+	 			 <!--<a href="#modal-one" class="btn-close" aria-hidden="true">×</a>-->
+			</div>
+			<div class="modal-body">
+				<p>Thank you for visiting !</p>
+			</div>
+			<div class="modal-footer">
+				<a href="#modal-one" class="btn">Close</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="wrapper">
+<!-- row 1, 4 individual boxes -->
+		<div class="row" style="text-align: center;">
+			<img src="img/ShettyBakers.png" class="brand-image" alt="">
+		</div>
+		<div class="row" style="text-align: center;"><input onclick="contactus()" type="button" value="Contact us" id="contact-us"></div>
+		<div class="row"><ul id="cakes"><li>Place an order:</li></ul></div>
+		<div class="row">
+			<article class="col-1-2" onclick="addList(this.id)" id="1">
+				<h3>Boston Cream Pie</h3>
+			    <img src="img/boston-cream.jpg" alt="Boston creme pie.">
+			    <p>Boston's famous dessert, a combination of yellow cake, vanilla pudding, and chocolate frosting.</p>
+			    <p class="read-more"><a href="http://www.foodnetwork.com/recipes/boston-cream-pie-recipe0-1908702">Read more &gt;&gt;</a></p>
+			</article>
+			<article class="col-1-2" onclick="addList(this.id)" id="2">
+		    	<h3>Coconut Cream Pie</h3>
+		    	<img src="img/coconut-cream.jpg" alt="Coconut cream pie.">
+		    	<p>Coconut cream pie will take you to an island escape. Especially delicious in winter. Coconut also has ...</p>
+		    	<p class="read-more"><a href="https://www.favfamilyrecipes.com/coconut-cream-pie-2/">Read more &gt;&gt;</a></p>
+		    </article>
+		    <article class="col-1-2" onclick="addList(this.id)" id="3">
+		    	<h3>Key Lime Pie</h3>
+		    	<img src="img/keylime-pie.jpg" alt="Key lime pie.">
+		    	<p>Key lime pie is based on the tiny key limes from Florida. These limes are less sour than conventional limes. </p>
+		    	<p class="read-more"><a href="https://www.epicurious.com/recipes/food/views/key-lime-pie-108125" target="_blank">Read more &gt;&gt;</a></p>
+		    </article>
+		    <article class="col-1-2" onclick="addList(this.id)" id="4">
+		    	<h3>Pumpkin Pie</h3>
+		    	<img src="img/pumpkin-pie.jpg" alt="Pumpkin pie.">
+		    	<p>A staple of every Thanksgiving dinner table, pumpkin pie is delicious any time of year. Grandm ...</p>
+		    	<p class="read-more"><a href="http://www.kingarthurflour.com/recipes/pumpkin-pie-recipe" target="_blank">Read more &gt;&gt;</a></p>
+		    </article>
+		</div>
+<!-- row 2, 2 boxes spanning 2 rows -->
+		<div class="row">
+		    <article class="col-2"  onclick="addList(this.id)" id="5">
+		    	<h3>Key Lime Pie</h3>
+		    	<img src="img/keylime-pie.jpg" alt="Key lime pie.">
+		    	<p>Key lime pie is based on the tiny key limes from Florida. These limes are less sour than conventional limes. </p>
+		    	<p class="read-more"><a href="https://www.epicurious.com/recipes/food/views/key-lime-pie-108125" target="_blank">Read more &gt;&gt;</a></p>
+		    </article>
+		    <article class="col-2" onclick="addList(this.id)" id="6">
+		    	<h3>Pumpkin Pie</h3>
+		    	<img src="img/pumpkin-pie.jpg" alt="Pumpkin pie.">
+		    	<p>A staple of every Thanksgiving dinner table, pumpkin pie is delicious any time of year.</p>
+		    	<p class="read-more"><a href="http://www.kingarthurflour.com/recipes/pumpkin-pie-recipe" target="_blank">Read more &gt;&gt;</a></p>
+		    </article>
+		</div>
+<!-- row 3: narrow left column, wide right/content column -->
+		<div class="row">
+			<article class="col-1-4" onclick="addList(this.id)" id="7">
+				<h3>Boston Cream Pie</h3>
+			    <img src="img/boston-cream.jpg" alt="Boston creme pie.">
+			    <p>Boston's famous dessert, a combination of yellow cake, vanilla pudding, and chocolate frosting.</p>
+			    <p class="read-more"><a href="http://www.foodnetwork.com/recipes/boston-cream-pie-recipe0-1908702">Read more &gt;&gt;</a></p>
+			</article>
+			<article class="col-3" onclick="addList(this.id)" id="8">
+		    	<h3>Coconut Cream Pie</h3>
+		    	<img src="img/coconut-cream.jpg" alt="Coconut cream pie.">
+				<p>Coconut cream pie will take you to an island escape. Especially delicious in winter.\n sdfsiicfs</p>
+				<p>A pastery a day keeps a doctor away.</p>
+		    	<p class="read-more"><a href="https://www.favfamilyrecipes.com/coconut-cream-pie-2/">Read more &gt;&gt;</a></p>
+		    </article>
+		</div>
+<!-- row 4: one column -->
+		<div class="row">
+			<article class="col-4" onclick="addList(this.id)" id="9">
+				<h3>Boston Cream Pie</h3>
+			    <img src="img/boston-cream.jpg" alt="Boston creme pie.">
+			    <p>Boston's famous dessert, a combination of yellow cake, vanilla pudding, and chocolate frosting.</p>
+			    <p class="read-more"><a href="http://www.foodnetwork.com/recipes/boston-cream-pie-recipe0-1908702">Read more &gt;&gt;</a></p>
+			</article>
+		</div>
+	</div>
+</body>
+</html>

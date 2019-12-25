@@ -1,0 +1,272 @@
+/* Border box declaration 
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+@import url('https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap');
+@font-face {
+	font-family: 'ChalkFont';
+	src: url('SqueakyChalkSound.ttf') format('truetype');
+}
+html {
+  box-sizing: border-box;
+}
+/* inherit border-box on all elements in the universe and before and after
+ */
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+body::-webkit-scrollbar {
+	width: 11px;
+  }
+body {
+	font-family: Arial, Geneva, sans-serif;
+	background: linear-gradient(75deg, #f4eba0 50%, #c0faca 50%);
+	scrollbar-width: 11px;
+}
+
+a {
+	color: #2772B0;
+	font-weight: bold;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+.brand-name {
+	margin-left: 4%;
+}
+.brand-image {
+	margin-top: 20px;;
+	max-width:60%;
+	max-height:60%;
+}
+p {
+	font-family: 'Cedarville Cursive', cursive;
+}
+.read-more {
+	font-family: 'Cedarville Cursive', cursive;
+}
+#contact-us {
+	border: #000000 solid 2px;
+	background: linear-gradient(75deg, #f4eba0 50%, #c0faca 50%);
+	transform: scale(2);
+	margin-bottom: 20px;
+}
+#contact-us:hover {
+	cursor: pointer;
+	transform: scale(2.1);
+}
+.wrapper {
+	width: 97%;
+	max-width: 1200px;
+	margin: 0 auto;
+	float: none;
+}
+
+div img {
+	width: 100%;
+	max-width: 250px; 
+}
+/* grid system */
+.row {
+	margin-bottom: 40px;
+}
+.row::after {
+    content:"";
+    display: table;
+    clear:both;
+} 
+[class*='col-'] {
+	width: 92%;
+	margin-left: 4%;
+	margin-right: 4%;
+	min-height: 1px;
+	border: rgb(95, 96, 97) solid 4px;
+	border-radius: 55px;
+	text-align: center;
+	background-repeat: no-repeat;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+}
+[class*='col-']:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+
+.col-1-2,
+.col-1-4 {
+	background-color: #ffc;
+}
+.col-2,
+.col-2-4 {
+	background-color: #ccf;
+}
+.col-3 {
+	background-color: #fcf;
+}
+.col-4 {
+	background-color: #cff;
+}
+
+/* Scroll bars */
+::-webkit-scrollbar {
+	width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: #bffaca;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #000000;
+	border-radius: 10px;
+	border: 3px solid black;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #f0e268; 
+  }
+
+/* Modal  style*/
+.btn {
+    background: inherit;
+    border-radius: 3px;
+    color: #000;
+    display: inline-block;
+    font-size: 14px;
+    padding: 8px 15px;
+    text-decoration: none;
+    text-align: center;
+    min-width: 60px;
+    position: relative;
+    transition: color .1s ease;
+}
+.btn.btn-big {
+    font-size: 18px;
+    padding: 15px 20px;
+    min-width: 100px;
+}
+.btn-close {
+    color: #aaaaaa;
+    font-size: 30px;
+    text-decoration: none;
+    position: absolute;
+    right: 5px;
+    top: 0;
+}
+.btn-close:hover {
+    color: #919191;
+}
+.modal:target:before {
+    display: none;
+}
+.modal:before {
+    content:"";
+    display: block;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	z-index: 10;
+}
+.modal .modal-dialog {
+    background: linear-gradient(75deg, #f4eba0 50%, #c0faca 50%);
+    border: #333333 solid 1px;
+    border-radius: 7%;
+    margin-left: -200px;
+    position: fixed;
+    left: 50%;
+    z-index: 11;
+    width: 360px;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -moz-transition: -moz-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    top: 20%;
+}
+.modal:target .modal-dialog {
+    top: -100%;
+    -webkit-transform: translate(0, -500%);
+    -ms-transform: translate(0, -500%);
+    transform: translate(0, -500%);
+}
+.modal-body {
+	padding: 20px;
+	text-align: center;
+	font-weight: bolder;
+	font-size: 1.7em;
+}
+.modal-header, .modal-footer {
+    padding: 10px 20px;
+}
+.modal-header {
+    
+}
+.modal-header h2 {
+    font-size: 20px;
+}
+.modal-footer {
+    
+    text-align: right;
+}
+
+#cakes {
+	background-color: #535353;
+	border: #e8cca0 solid 20px;
+	max-width: 500px;
+	text-align: center;
+	list-style-type: none;
+	border-radius: 20px;
+	color: white;
+	font-size: 1.4em;
+	margin: auto;
+	min-height: 300px;
+}
+#cakes li {
+	padding: 4px;
+	font-family: 'ChalkFont';
+}
+/* media queries */
+
+/* Mobile Landscape Screen Sizes */
+@media only screen and (min-width: 480px)  {
+	[class*='col-'] {
+		margin-right: 0;
+		margin-bottom: 10px;
+		min-height: 1px;
+		float: left;
+	}
+	.col-1-2,
+	.col-2 {
+		width: 44%;
+	}
+	.col-1-4,
+	.col-3,
+	.col-4 {
+		width: 92%;
+	}
+
+}
+/* Desktop screen Sizes */
+@media only screen and (min-width: 768px) {
+	.col-1-2, 
+	.col-1-4 {
+		width: 20%;
+	}
+	.col-2 {
+		width: 44%;
+	}
+	.col-3 {
+		width: 68%;
+	}
+	.col-4 {
+		width: 92%;
+	}
+}
