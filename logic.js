@@ -1,24 +1,39 @@
 var cakeList = []; // Order list with tags
 var orderList = []; // Order list final
 var nameParticipant = ""; // Participant name
-
+var rollnoParticipant = ""; // Roll no
 
 // Sending email on place order
 function sendEmail() {
-    var template_params = {
-        "reply_to": "reply_to_value",
-        "from_name": String(nameParticipant),
-        "message_html": "<p>"+String(orderList)+"</p>"
-     }
-     
-     var service_id = "default_service";
-     var template_id = "template_QzIle3i7";
-     emailjs.send(service_id, template_id, template_params);
-     alert('Order has been placed successfully. All the best!');
+    if (typeof nameParticipant != 'undefined') {
+        var template_params = {
+            "reply_to": "reply_to_value",
+            "from_name": String(nameParticipant),
+            "message_html": "<p>"+String(orderList)+"</p>"
+         }
+         
+         var service_id = "default_service";
+         var template_id = "template_QzIle3i7";
+         emailjs.send(service_id, template_id, template_params);
+         
+         alert(String(nameParticipant)+'your order has been placed successfully. All the best!');
+         
+         // turning off session
+         nameParticipant = null;
+         delete nameParticipant;   
+    }
+    else {
+        alert('Your session has timed out.');
+    }
 }
 // To store name from modal
 function storedata() {
     nameParticipant = document.getElementById("participant").value;
+    rollnoParticipant = document.getElementById("rollno").value;
+    if (nameParticipant == "") {
+        alert('Participant name and admission no. required for submission');
+        window.location.replace("http://127.0.0.1:5500/index.html");
+    }
     console.log(nameParticipant);
 }
 

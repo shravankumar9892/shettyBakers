@@ -207,7 +207,7 @@ div img {
 .modal-header, .modal-footer {
     padding: 10px 20px;
 }
-#participant {
+#participant, #rollno {
 	background-color: transparent;
 }
 input[type=text] {
