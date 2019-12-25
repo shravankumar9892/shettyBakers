@@ -8,7 +8,7 @@ function sendEmail() {
     if (typeof nameParticipant != 'undefined') {
         var template_params = {
             "reply_to": "reply_to_value",
-            "from_name": String(nameParticipant),
+            "from_name": String(nameParticipant)+", "+String(rollnoParticipant),
             "message_html": "<p>"+String(orderList)+"</p>"
          }
          
