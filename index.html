@@ -2,11 +2,17 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Shetty Bakers | Free pastries for everyone</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- <link rel="stylesheet" href="css/normalize.css"> -->
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/floats.css">
 	<script src="logic.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+	<script type="text/javascript">
+   (function(){
+      emailjs.init("user_eRy9Mtm6lN0nynZWwrsF4");
+   })();
+</script>
 </head>
 <body>
 	<!-- Modal opening message -->
@@ -14,14 +20,15 @@
 	<div class="modal" id="modal-one" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-header">
-				 <h2>Shetty Bakers</h2>
+				 <h2>Name&nbsp;&nbsp;<input type="text" name="participant" id="participant"></h2>
 	 			 <!--<a href="#modal-one" class="btn-close" aria-hidden="true">×</a>-->
 			</div>
 			<div class="modal-body">
 				<p>Thank you for visiting !</p>
 			</div>
 			<div class="modal-footer">
-				<a href="#modal-one" class="btn">Close</a>
+				
+				<a href="#modal-one" class="btn" onclick="storedata()">Close</a>
 			</div>
 		</div>
 	</div>
@@ -31,8 +38,8 @@
 		<div class="row" style="text-align: center;">
 			<img src="img/ShettyBakers.png" class="brand-image" alt="">
 		</div>
-		<div class="row" style="text-align: center;"><input onclick="contactus()" type="button" value="Contact us" id="contact-us"></div>
-		<div class="row"><ul id="cakes"><li>Place an order:</li></ul></div>
+		<div class="row" style="text-align: center;"><input onclick="sendEmail()" type="button" value="Place order" id="contact-us"></div>
+		<div class="row"><ul id="cakes"><li style="text-decoration: underline;">Write your order:</li></ul></div>
 		<div class="row">
 			<article class="col-1-2" onclick="addList(this.id)" id="1">
 				<h3>Boston Cream Pie</h3>

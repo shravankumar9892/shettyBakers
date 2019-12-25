@@ -1,5 +1,6 @@
 /* Border box declaration 
 https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+
 @import url('https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap');
 @font-face {
 	font-family: 'ChalkFont';
@@ -206,8 +207,19 @@ div img {
 .modal-header, .modal-footer {
     padding: 10px 20px;
 }
-.modal-header {
-    
+#participant {
+	background-color: transparent;
+}
+input[type=text] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 2px solid rgb(161, 155, 155);
+  }
+input[type=text]:active {
+	border-bottom: 2px solid rgb(161, 155, 155);
 }
 .modal-header h2 {
     font-size: 20px;
