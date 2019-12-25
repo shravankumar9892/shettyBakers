@@ -32,7 +32,7 @@ function storedata() {
     rollnoParticipant = document.getElementById("rollno").value;
     if (nameParticipant == "") {
         alert('Participant name and admission no. required for submission');
-        window.location.replace("http://127.0.0.1:5500/index.html");
+        window.location.replace("https://shravankumar9892.github.io/shettyBakers/");
     }
     console.log(nameParticipant);
 }
